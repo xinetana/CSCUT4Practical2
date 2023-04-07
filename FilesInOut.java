@@ -47,4 +47,7 @@ public class FilesInOut {
         	        String month = dateString.substring(2, 4);
         	        String year = dateString.substring(4);
         	        formattedDate = day + "/" + month + "/" + year;
+ // write formatted output to file
+        	        writer.println(formattedName.toString() + " " + formattedDate);
+        	    }
     
