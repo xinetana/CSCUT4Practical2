@@ -14,5 +14,14 @@ public class FilesInOut {
     public static void main(String[] args) {
         File inputFile = new File("C:\\Users\\Lenovo\\Downloads\\CSCUT4Practical2-main\\CSCUT4Practical2-main\\input.txt");
         File outputFile = new File("output.txt");
+        
+        try (Scanner scanner = new Scanner(inputFile);
+        	     PrintWriter writer = new PrintWriter(outputFile)) {
+
+        	    while (scanner.hasNextLine()) {
+        	        String line = scanner.nextLine();
+        	        String[] words = line.split(" ");
+        	        StringBuilder formattedName = new StringBuilder();
+        	        String formattedDate = "";
 
     
