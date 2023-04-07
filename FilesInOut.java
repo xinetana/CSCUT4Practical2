@@ -50,4 +50,13 @@ public class FilesInOut {
  // write formatted output to file
         	        writer.println(formattedName.toString() + " " + formattedDate);
         	    }
-    
+            
+    System.out.println("Output written to " + outputFile.getAbsolutePath());
+        	} catch (FileNotFoundException e) {
+        	    System.err.println("File not found: " + e.getMessage());
+        	} catch (Exception e) {
+        	    System.err.println("An error occurred: " + e.getMessage());
+        	}
+    }
+    }
+
