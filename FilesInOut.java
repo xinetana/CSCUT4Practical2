@@ -40,5 +40,11 @@ public class FilesInOut {
         	                formattedName.append(" ").append(formattedWord.replaceAll("\\d", ""));
         	            }
         	        }
-
+// format date
+        	        int dateIndex = line.lastIndexOf(" ");
+        	        String dateString = line.substring(dateIndex + 1);
+        	        String day = dateString.substring(0, 2);
+        	        String month = dateString.substring(2, 4);
+        	        String year = dateString.substring(4);
+        	        formattedDate = day + "/" + month + "/" + year;
     
