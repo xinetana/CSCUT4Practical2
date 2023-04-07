@@ -23,5 +23,22 @@ public class FilesInOut {
         	        String[] words = line.split(" ");
         	        StringBuilder formattedName = new StringBuilder();
         	        String formattedDate = "";
+ // format name
+        	        for (int i = 0; i < words.length; i++) {
+        	            String word = words[i];
+
+        	            if (i == 0) {
+        	                String formattedWord = Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
+        	                formattedName.append(formattedWord);
+        	            } else if (i == 1 && word.length() == 2) {
+        	                formattedName.append(". ").append(word.toUpperCase());
+        	            } else if (i == words.length - 1) {
+        	                String formattedWord = Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
+        	                formattedName.append(" ").append(formattedWord.replaceAll("\\d", ""));
+        	            } else {
+        	                String formattedWord = Character.toUpperCase(word.charAt(0)) + word.substring(1).toLowerCase();
+        	                formattedName.append(" ").append(formattedWord.replaceAll("\\d", ""));
+        	            }
+        	        }
 
     
